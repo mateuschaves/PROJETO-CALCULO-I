@@ -13,13 +13,13 @@ export default class App extends React.Component {
 			FUNCIONA PLS	!!!!
 			OH VONTADE DE TOMAR UM TIRO !!!!
   */
-
   // Equação que vai ser derivada.
   f(x){
+      // f(x) = πx² 
       let fx = Math.PI * Math.pow(x,2);
       return fx;
   }
-  // Derivando fx
+  // Derivando fx.
   derive(x, h){
     // Gerando um número aleatório entre 0 e 26.
     let index = (Math.floor(Math.random()* 25 + 1));
@@ -29,14 +29,25 @@ export default class App extends React.Component {
     if( !isNaN(x) && isFinite(x)){
       let fxh = this.f(parseFloat(x) + h);
       let fx  = this.f(parseFloat(x));
-      let derive  = (fxh - fx) / h;
+      // f'(x) = 2πx 
+      let slope  = (fxh - fx) / h;
       this.setState({
-          circumference: derive.toFixed(2),
+          circumference: slope.toFixed(2),
       });
+      // Mostrando o log no console.
+      this.show_log(fxh, fx, slope, x, h);
     }else{
       Alert.alert('Não cara, digite um número', 'Como eu vou derivar no ponto '+ x + '? Facilite as coisas meu '+treatment[index]+'.-.');
     }
-    
+  }
+  //Show log.
+  show_log(fxh, fx, slope, x, h){
+    console.log(" ");
+    console.log("Valor de fx : " + fx);
+    console.log("Valor de f(x + h): " + fxh);
+    console.log("Valor da f'(" + x + "): ", + slope);
+    console.log("Valor de h: ", h);
+    console.log(" ");
   }
   render() {
     return (
@@ -54,7 +65,7 @@ export default class App extends React.Component {
         />
         <Button
           title={"Calcular a circunferência de r = "+ this.state.radius}
-          onPress={() =>  this.derive(this.state.radius, 0.00000001)}
+          onPress={() =>  this.derive(this.state.radius, 0.000000001)}
         />
         <Text style={styles.textResult}>
         	Raio : {this.state.radius}
@@ -62,7 +73,6 @@ export default class App extends React.Component {
         <Text style={styles.textResult}>
         	Circunferência : {this.state.circumference}
         </Text>
-        	
       </View>
     );
   }
