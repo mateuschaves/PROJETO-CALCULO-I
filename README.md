@@ -35,9 +35,6 @@ react-native run-ios
 ## Desenvolvido com
 
 * [React Native](https://facebook.github.io/react-native/) - Build native mobile apps using JavaScript and React.
-* [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
-* [React Navigation](https://reactnavigation.org/) - Routing and navigation for your React Native apps.
-
 
 ## Contribuidores
 
