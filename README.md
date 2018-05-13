@@ -7,8 +7,8 @@ Aplicação do conceito de derivadas em um aplicativo.
 
 Dependências necessárias para rodar o projeto: 
 
-* [React Native 0.54+](https://facebook.github.io/react-native/).
-* [Marshmallow API Level 23, x86_64 ABI image with a Android 6.0 (Google APIs)](https://www.genymotion.com/).
+* [React Native 0.55+](https://facebook.github.io/react-native/).
+* [Expo XDE](https://expo.io/learn).
 * [NodeJS](https://nodejs.org/en/).
 
 
@@ -20,21 +20,13 @@ git clone https://github.com/mateuschaves/APLICATIVO-PROJETO-CALCULO-I.git
 ```
 
 ## Executando
-Dentro da pasta do projeto e com o emulador aberto, digite o seguinte comando:
-
-Para executar no emulador android: 
-```
-react-native run-android
-```
-
-Para executar no emulador IOS:
-```
-react-native run-ios
-```
+Abra o projeto com o Expo XDE e clique em "share".
+Leia o código QR no aplicativo Expo do celular.
 
 ## Desenvolvido com
 
 * [React Native](https://facebook.github.io/react-native/) - Build native mobile apps using JavaScript and React.
+* [Expo](https://expo.io/) - The fastest way to build an app.
 
 ## Contribuidores
 
