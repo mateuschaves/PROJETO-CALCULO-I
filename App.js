@@ -14,40 +14,74 @@ export default class App extends React.Component {
 			OH VONTADE DE TOMAR UM TIRO !!!!
   */
   // Equação que vai ser derivada.
-  f(x){
-      // f(x) = πx² 
-      let fx = Math.PI * Math.pow(x,2);
-      return fx;
+  f(r){
+      // f(r) = πr² 
+      let fr = Math.PI * Math.pow(r,2);
+      return fr;
   }
-  // Derivando fx.
-  derive(x, h){
-    // Gerando um número aleatório entre 0 e 26.
-    let index = (Math.floor(Math.random()* 25 + 1));
-    // Possíveis formas de tratamento.
-    let treatment = ["consagrado", "condensado", "condenado", "chamuscado", "concursado", "condecorado", "comissionado", "calejado", "cutucado", "cuckado", "abenssoado", "desgraçado", "lisonjeado", "alejado", "afetado", "afeminado", "sensualizado", "fuzilado", "adequado", "algemado", "amargurado", "retardado", "reciclado", "coroado", "abestado", "ensaboado"];
+  // Derivando f(r).
+  derive(r, h){
     // Validando o valor de x.
-    if( !isNaN(x) && isFinite(x)){
-      let fxh = this.f(parseFloat(x) + h);
-      let fx  = this.f(parseFloat(x));
-      // f'(x) = 2πx 
-      let slope  = (fxh - fx) / h;
+    if( !isNaN(r) && isFinite(r)){
+      let frh = this.f(parseFloat(r) + h);
+      let fr  = this.f(parseFloat(r));
+      /*    Calculando a derivada pela definição de limite.
+       *    f'(r) = 2πr 
+       */
+      let slope  = (frh - fr) / h;
       this.setState({
           circumference: slope.toFixed(2),
       });
       // Mostrando o log no console.
-      this.show_log(fxh, fx, slope, x, h);
+      this.show_log(frh, fr, slope, r, h);
     }else{
-      Alert.alert('Não cara, digite um número', 'Como eu vou derivar no ponto '+ x + '? Facilite as coisas meu '+treatment[index]+'.-.');
+      let treatment = this.choose_treatment();
+      Alert.alert('Não cara, digite um número', 'Como eu vou derivar no ponto '+ r + '? Facilite as coisas meu '+treatment+'.-.');
     }
   }
   //Show log.
-  show_log(fxh, fx, slope, x, h){
+  show_log(frh, fr, slope, r, h){
     console.log(" ");
-    console.log("Valor de fx : " + fx);
-    console.log("Valor de f(x + h): " + fxh);
-    console.log("Valor da f'(" + x + "): ", + slope);
+    console.log("Valor de fx : " + fr);
+    console.log("Valor de f(x + h): " + frh);
+    console.log("Valor da f'(" + r + "): ", + slope);
     console.log("Valor de h: ", h);
     console.log(" ");
+  }
+  // Escolhe uma forma de tratamento.
+  choose_treatment(){
+    // Gerando um número aleatório entre 0 e 26.
+    let index = (Math.floor(Math.random()* 25 + 1));
+    // Possíveis formas de tratamento.
+    let treatment = [
+      "consagrado",
+      "condensado",
+      "condenado",
+      "chamuscado",
+      "concursado",
+      "condecorado",
+      "comissionado",
+      "calejado", 
+      "cutucado", 
+      "cuckado", 
+      "abenssoado", 
+      "desgraçado", 
+      "lisonjeado", 
+      "alejado", 
+      "afetado", 
+      "afeminado", 
+      "sensualizado", 
+      "fuzilado", 
+      "adequado", 
+      "algemado", 
+      "amargurado", 
+      "retardado", 
+      "reciclado", 
+      "coroado", 
+      "abestado", 
+      "ensaboado"
+    ];
+    return treatment[index];
   }
   render() {
     return (
@@ -65,6 +99,7 @@ export default class App extends React.Component {
         />
         <Button
           title={"Calcular a circunferência de r = "+ this.state.radius}
+          // Chamando a função de derivada com o valor de h muito próximo a 0.
           onPress={() =>  this.derive(this.state.radius, 0.000000001)}
         />
         <Text style={styles.textResult}>
