@@ -21,7 +21,7 @@ export default class App extends React.Component {
   }
   // Derivando f(r).
   derive(r, h){
-    // Validando o valor de x.
+    // Validando o valor de r.
     if( !isNaN(r) && isFinite(r)){
       let frh = this.f(parseFloat(r) + h);
       let fr  = this.f(parseFloat(r));
