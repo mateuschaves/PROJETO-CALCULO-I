@@ -30,8 +30,8 @@ Leia o código QR no aplicativo Expo do celular.
 
 ## Contribuidores
 
-* **Mateus Henrique** -  ( mateus.henriquechaves@ufpe.br ).
+* **Mateus Henrique** -  [Github](https://github.com/mateuschaves).
 * **Daniel**
-* **Eduarda**
+* **Eduarda** - [Github](https://github.com/eduardax).
 * **Felipe**
 * **Lurdes**
