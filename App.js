@@ -36,15 +36,20 @@ export default class App extends React.Component {
       this.show_log(frh, fr, slope, r, h);
     }else{
       let treatment = this.choose_treatment();
+      console.log(" ")
+      console.log("Não foi possível derivar no ponto x = " + r);
+      console.log("O valor informado não é válido !");
+      console.log(" ");
       Alert.alert('Não cara, digite um número', 'Como eu vou derivar no ponto '+ r + '? Facilite as coisas meu '+treatment+'.-.');
     }
   }
   //Show log.
   show_log(frh, fr, slope, r, h){
     console.log(" ");
+    console.log("Derivando no ponto: x = "+ r);
     console.log("Valor de fx : " + fr);
     console.log("Valor de f(x + h): " + frh);
-    console.log("Valor da f'(" + r + "): ", + slope);
+    console.log("Valor de f'(" + r + "): ", + slope);
     console.log("Valor de h: ", h);
     console.log(" ");
   }
