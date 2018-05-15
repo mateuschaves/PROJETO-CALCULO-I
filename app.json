@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "calculo-derivadas",
-    "description": "This project is really great.",
+    "name": "Derivando um círculo",
+    "description": "Aplicativo do projeto de aplicação de derivadas da disciplina Cálculo diferencial e integral I do curso de Sistemas de Informação na Universidade de Pernambuco..",
     "slug": "calculo-derivadas",
     "privacy": "public",
     "sdkVersion": "27.0.0",
@@ -22,6 +22,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.upe.derivandoumciruclo"
     }
   }
 }
