@@ -35,7 +35,7 @@ Leia o código QR no aplicativo Expo do celular.
 ## Contribuidores
 
 * **Mateus Henrique** -  [Github](https://github.com/mateuschaves).
-* **Daniel**
+* **Daniel** - [Github](https://github.com/danielrabchi).
 * **Eduarda** - [Github](https://github.com/eduardax).
 * **Felipe**
 * **Lurdes**
