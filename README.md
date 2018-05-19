@@ -19,6 +19,10 @@ Dentro do caminho desejado, execute o seguinte comando:
 git clone https://github.com/mateuschaves/APLICATIVO-PROJETO-CALCULO-I.git
 ```
 
+Após isso uma pasta chamada 'PROJETO-CALCULO-I' será criada, dentro dela digite o comando:
+```
+npm install
+```
 ## Executando
 Abra o projeto com o Expo XDE e clique em "share".
 Leia o código QR no aplicativo Expo do celular.
