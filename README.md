@@ -1,6 +1,6 @@
 # Aplicativo do projeto de Cálculo Integral e Diferencial I
 
-Aplicação do conceito de derivadas em um aplicativo.
+Aplicação da definição de derivadas em um aplicativo.
 
 
 ## Pré-requisitos
