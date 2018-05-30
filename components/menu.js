@@ -3,10 +3,11 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 export default class Menu extends React.Component {
-    // Título da tela.
-    static navigationOptions = {
-        title: 'Menu Topzera',
-      };
+
+  // Título da tela.
+  static navigationOptions = {
+    title: 'Menu Topzera',
+  };
 
   render() {
     return (
@@ -22,6 +23,7 @@ export default class Menu extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',

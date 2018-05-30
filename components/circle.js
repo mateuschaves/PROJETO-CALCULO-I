@@ -7,7 +7,6 @@ export default class Circle extends React.Component {
     static navigationOptions = {
         title: 'Derivadas no círculo',
       };
-
     // Estado do componente.
     state = {
       circumference: 0,
@@ -127,14 +126,13 @@ export default class Circle extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   boxInput: {
     alignSelf: 'stretch',
-    marginTop: 10,
     marginBottom: 25,
     paddingVertical: 0,
     paddingHorizontal: 20,
