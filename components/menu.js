@@ -12,7 +12,7 @@ export default class Menu extends React.Component {
   render() {
     return (
       /*
-            Olá duds, essa é a tela que tu vai editar * Imagine um coala aqui *.
+            Olá duds, essa é a tela que tu vai editar * Imagine um coala fofinho aqui *.
       */
       <View style={styles.container}>
             <Text>Olá duds, eu sou uma tela, me deixe bonita =).</Text>
