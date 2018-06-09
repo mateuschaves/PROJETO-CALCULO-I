@@ -29,8 +29,10 @@ export default class Circle extends React.Component {
   derive(r, h){
     // Validando o valor de r.
     if( !isNaN(r) && isFinite(r)){
+       // Equivale ao f( x + h)
       let frh = this.f(parseFloat(r) + h);
-      let fr  = this.f(parseFloat(r));
+      // Equivale ao f(x)
+      let fr  = this.f(parseFloat(r)); 
       /*    Calculando a derivada pela definição de limite.
        *    f'(r) = 2πr 
        */
